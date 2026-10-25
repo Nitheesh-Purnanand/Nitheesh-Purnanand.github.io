@@ -51,10 +51,9 @@ Changing a colour is a one-line edit: the palette at the top of `styles.css`.
 --grass:  #66C46B;   /* the hills under the hero */
 ```
 
-Draw a colour from the palette at the top of `styles.css`. Two things are deliberately left
-out of the HTML: your **phone number** (public pages collect spam) and any address detail
-beyond the city. If you want the number on the page, add it inside the `.contact__links`
-block in `index.html`.
+Two things are deliberately left out of the HTML: your **phone number** (public pages
+collect spam) and any address detail beyond the city. If you want the number on the page,
+add it inside the `.contact__links` block in `index.html`.
 
 ### The link preview image
 
