@@ -1,0 +1,8 @@
+{
+  // Handy defaults for this project. Harmless if you ignore them.
+  "liveServer.settings.port": 5500,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "html.format.wrapLineLength": 100,
+  "files.eol": "\n"
+}
