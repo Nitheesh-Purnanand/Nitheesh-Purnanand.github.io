@@ -130,4 +130,5 @@ few hours to settle.
 | 404 at the domain | `CNAME` file deleted from the repo, or Pages source set to another branch. |
 | Changes not showing | Hard refresh, or check the Actions tab for a failed Pages build. |
 | "Not secure" warning | Certificate not issued yet. Fix DNS first, then wait. |
+| HTTPS never arrives, API says "The certificate does not exist yet" | Check `www` resolves. GitHub issues one certificate covering the apex **and** `www`, so a dangling `www` CNAME (for example `nitheesh-purnanand.github.io.nitheesh920.qd.je`) can stall issuance. Point it at `nitheesh-purnanand.github.io.` with the trailing dot. |
 | Fonts look like Times New Roman | Google Fonts blocked offline; the site still works with fallback fonts. |
