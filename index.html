@@ -3,99 +3,489 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nitheesh — nitheesh920.qd.je</title>
-  <meta name="description" content="Personal site of Nitheesh Purnanand. Projects, notes and contact." />
+  <title>Nitheesh Purnanand — Full-Stack Developer &amp; AI/DS Student</title>
+  <meta name="description" content="Chalumuri Nitheesh Purnanand builds web apps, ML pipelines and systems experiments. Full-stack developer and B.Tech CSE (AI &amp; Data Science) student at IIIT Manipur." />
+  <meta name="theme-color" content="#FFC93C" />
 
-  <!-- This is the tab icon. Swap emoji/favicon later if you want. -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>N</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 8 L94 92 H6 Z' fill='%23F4732A' stroke='%23221A33' stroke-width='6'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- ===== HEADER / NAV ===== -->
-  <header class="site-header">
-    <a class="brand" href="#top">nitheesh<span>920</span></a>
+  <!-- Song-lyric ribbon. Purely decorative. -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>♪ There's 104 days of summer vacation</span>
+      <span>and school comes along just to end it ♪</span>
+      <span>So the annual problem for our generation</span>
+      <span>is finding a good way to spend it ♪</span>
+      <span>♪ There's 104 days of summer vacation</span>
+      <span>and school comes along just to end it ♪</span>
+      <span>So the annual problem for our generation</span>
+      <span>is finding a good way to spend it ♪</span>
+    </div>
+  </div>
 
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+  <header class="topbar">
+    <a class="logo" href="#top">
+      <span class="logo__tri" aria-hidden="true"></span>
+      <span class="logo__text">Nitheesh<em>Purnanand</em></span>
+    </a>
+
+    <nav class="nav" aria-label="Sections">
+      <a href="#idea">The Big Idea</a>
+      <a href="#inventions">Inventions</a>
+      <a href="#missions">Missions</a>
+      <a href="#gadgets">Gadgets</a>
+      <a href="#contact">Say hi</a>
     </nav>
 
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    <button class="fedora" id="agentPBtn" aria-pressed="false" title="Secret agent mode">
+      <span class="fedora__icon" aria-hidden="true"></span>
+      <span class="fedora__label">Agent P mode</span>
+    </button>
   </header>
 
   <main id="top">
-    <!-- ===== HERO: the first thing visitors see ===== -->
+    <!-- ============ HERO ============ -->
     <section class="hero">
-      <p class="eyebrow">Available for work</p>
+      <div class="hero__rays" aria-hidden="true"></div>
 
-      <h1>
-        Hi, I'm Nitheesh.<br />
-        I build things for the web.
-      </h1>
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Hyderabad, India · Summer 2026</p>
 
-      <p class="lede">
-        This is a placeholder site living at <strong>nitheesh920.qd.je</strong>.
-        Edit <code>index.html</code>, save, and push — the change goes live in about a minute.
-      </p>
+          <h1>
+            Hey, Ferb, I know what we're<br />
+            <span class="hero__accent">gonna build today!</span>
+          </h1>
 
-      <div class="actions">
-        <a class="btn" href="#projects">See projects</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          <p class="hero__sub">
+            I'm <strong>Nitheesh Purnanand</strong> — a full-stack developer and
+            B.Tech CSE (AI &amp; Data Science) student at IIIT Manipur. I take the
+            "wouldn't it be cool if…" ideas and actually ship them.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#inventions">See the inventions</a>
+            <a class="btn btn--ghost" href="#contact">Hire the kid</a>
+          </div>
+
+          <ul class="hero__facts">
+            <li><strong>8.33</strong> CPI at IIIT Manipur</li>
+            <li><strong>3</strong> shipped projects</li>
+            <li><strong>2</strong> internships</li>
+          </ul>
+        </div>
+
+        <!-- Hand-drawn scene: Phineas, Ferb, Perry and a rollercoaster -->
+        <div class="hero__art">
+          <svg class="scene" viewBox="0 0 560 470" role="img"
+               aria-label="Illustration of Phineas, Ferb and Perry the Platypus in front of a rollercoaster">
+            <!-- sun -->
+            <g transform="translate(462,84)">
+              <g stroke="#221A33" stroke-width="5" stroke-linecap="round">
+                <line x1="0" y1="-70" x2="0" y2="-56" />
+                <line x1="50" y1="-50" x2="40" y2="-40" />
+                <line x1="70" y1="0" x2="56" y2="0" />
+                <line x1="50" y1="50" x2="40" y2="40" />
+                <line x1="0" y1="70" x2="0" y2="56" />
+                <line x1="-50" y1="50" x2="-40" y2="40" />
+                <line x1="-70" y1="0" x2="-56" y2="0" />
+                <line x1="-50" y1="-50" x2="-40" y2="-40" />
+              </g>
+              <circle r="44" fill="#FFC93C" stroke="#221A33" stroke-width="5" />
+            </g>
+
+            <!-- clouds -->
+            <g fill="#FFFFFF" stroke="#221A33" stroke-width="5">
+              <path d="M92 96 q0 -26 26 -26 q10 -22 34 -16 q24 5 26 26 q22 4 20 20 q-2 14 -20 14 h-66 q-20 0 -20 -18 z" />
+              <path d="M292 62 q0 -18 18 -18 q8 -16 26 -12 q18 4 20 20 q16 3 14 15 q-2 11 -15 11 h-50 q-14 0 -13 -16 z" />
+            </g>
+
+            <!-- rollercoaster -->
+            <g fill="none" stroke-linecap="round">
+              <path d="M-20 268 C 40 196 92 316 156 256 S 262 172 322 258 S 438 344 498 250 S 566 206 590 244"
+                    stroke="#221A33" stroke-width="15" />
+              <path d="M-20 268 C 40 196 92 316 156 256 S 262 172 322 258 S 438 344 498 250 S 566 206 590 244"
+                    stroke="#8B6BD1" stroke-width="8" />
+            </g>
+            <g stroke="#221A33" stroke-width="5" stroke-linecap="round">
+              <line x1="60" y1="248" x2="60" y2="330" />
+              <line x1="256" y1="212" x2="256" y2="330" />
+              <line x1="400" y1="292" x2="400" y2="330" />
+            </g>
+            <!-- cart -->
+            <g transform="translate(150,236) rotate(-14)">
+              <rect x="0" y="0" width="52" height="30" rx="8" fill="#FF7F9B" stroke="#221A33" stroke-width="4" />
+              <circle cx="13" cy="34" r="7" fill="#FFC93C" stroke="#221A33" stroke-width="4" />
+              <circle cx="40" cy="34" r="7" fill="#FFC93C" stroke="#221A33" stroke-width="4" />
+            </g>
+
+            <!-- ground shadows -->
+            <g fill="#000" opacity="0.12">
+              <ellipse cx="120" cy="392" rx="74" ry="12" />
+              <ellipse cx="262" cy="388" rx="58" ry="11" />
+              <ellipse cx="440" cy="404" rx="60" ry="12" />
+            </g>
+
+            <!-- PHINEAS -->
+            <g transform="translate(58,252)">
+              <path d="M52 22 L108 -4 L84 32 Z" fill="#F4732A" stroke="#221A33" stroke-width="4" stroke-linejoin="round" />
+              <path d="M60 18 L120 128 Q124 134 112 134 L8 134 Q-4 134 0 128 Z"
+                    fill="#FFD9B0" stroke="#221A33" stroke-width="4" stroke-linejoin="round" />
+              <circle cx="46" cy="86" r="13" fill="#fff" stroke="#221A33" stroke-width="3.5" />
+              <circle cx="76" cy="86" r="13" fill="#fff" stroke="#221A33" stroke-width="3.5" />
+              <circle cx="48" cy="88" r="5" fill="#221A33" />
+              <circle cx="78" cy="88" r="5" fill="#221A33" />
+              <path d="M52 108 q11 9 22 0" fill="none" stroke="#221A33" stroke-width="3.5" stroke-linecap="round" />
+            </g>
+
+            <!-- FERB -->
+            <g transform="translate(212,238)">
+              <rect x="-6" y="0" width="104" height="26" rx="9" fill="#3BA55D" stroke="#221A33" stroke-width="4" />
+              <rect x="4" y="18" width="84" height="120" rx="22" fill="#FFD9B0" stroke="#221A33" stroke-width="4" />
+              <circle cx="32" cy="56" r="12" fill="#fff" stroke="#221A33" stroke-width="3.5" />
+              <circle cx="62" cy="56" r="12" fill="#fff" stroke="#221A33" stroke-width="3.5" />
+              <circle cx="34" cy="58" r="4.6" fill="#221A33" />
+              <circle cx="64" cy="58" r="4.6" fill="#221A33" />
+              <path d="M48 66 q-9 22 3 28 q9 3 11 -7" fill="#FFD9B0" stroke="#221A33" stroke-width="3.5" stroke-linejoin="round" />
+              <path d="M38 112 q10 8 20 0" fill="none" stroke="#221A33" stroke-width="3.5" stroke-linecap="round" />
+            </g>
+
+            <!-- PERRY -->
+            <g transform="translate(396,286)">
+              <path d="M34 98 q-28 -8 -32 6 q6 14 34 6 z" fill="#009B9B" stroke="#221A33" stroke-width="4" stroke-linejoin="round" />
+              <ellipse cx="60" cy="90" rx="36" ry="32" fill="#00B3B3" stroke="#221A33" stroke-width="4" />
+              <path d="M38 120 h16 v10 h-16 z" fill="#F5A623" stroke="#221A33" stroke-width="3.5" />
+              <path d="M66 120 h16 v10 h-16 z" fill="#F5A623" stroke="#221A33" stroke-width="3.5" />
+              <ellipse cx="60" cy="102" rx="19" ry="10" fill="#F5A623" stroke="#221A33" stroke-width="4" />
+              <circle cx="46" cy="76" r="11" fill="#fff" stroke="#221A33" stroke-width="3" />
+              <circle cx="74" cy="76" r="11" fill="#fff" stroke="#221A33" stroke-width="3" />
+              <circle cx="47" cy="78" r="4.4" fill="#221A33" />
+              <circle cx="75" cy="78" r="4.4" fill="#221A33" />
+              <path d="M26 54 q2 -32 34 -32 q32 0 34 32 z" fill="#8B5E3C" stroke="#221A33" stroke-width="4" stroke-linejoin="round" />
+              <rect x="30" y="42" width="60" height="10" fill="#5B3A24" />
+              <ellipse cx="60" cy="54" rx="46" ry="10" fill="#8B5E3C" stroke="#221A33" stroke-width="4" />
+            </g>
+          </svg>
+          <p class="hero__caption">Fig. 1 — the gang, mid-brainstorm</p>
+        </div>
+      </div>
+
+      <svg class="hills" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 80 L0 42 Q 75 4 150 42 Q 225 80 300 42 Q 375 4 450 42 Q 525 80 600 42 Q 675 4 750 42 Q 825 80 900 42 Q 975 4 1050 42 Q 1125 80 1200 42 L1200 80 Z"
+              fill="var(--grass)" stroke="var(--outline)" stroke-width="4" />
+      </svg>
+    </section>
+
+    <!-- ============ THE GAG ============ -->
+    <section class="gag" aria-label="A running joke">
+      <div class="gag__bubble gag__bubble--q">
+        <span class="gag__who">Curious recruiter</span>
+        Aren't you a little young to be a&nbsp;full-stack developer?
+      </div>
+      <div class="gag__bubble gag__bubble--a">
+        <span class="gag__who">Me</span>
+        Yes. Yes I am.
       </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>
-        I'm a developer from India who likes clean interfaces and small tools that do one
-        thing well. Right now I'm learning how the web is put together, from DNS records
-        all the way up to the pixels on screen.
-      </p>
-      <p>
-        When I'm not coding, I'm probably tinkering with self-hosted software or reading
-        documentation for fun.
-      </p>
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="idea">
+      <div class="section__head">
+        <span class="badge badge--orange" aria-hidden="true"></span>
+        <h2>Today's big idea</h2>
+      </div>
+
+      <div class="idea">
+        <div class="card idea__main">
+          <p>
+            I'm studying for a <strong>B.Tech in Computer Science &amp; Engineering
+            (AI &amp; Data Science)</strong> at the Indian Institute of Information Technology
+            Manipur, currently holding a <strong>CPI of 8.33</strong>.
+          </p>
+          <p>
+            Most of what I know came from building things instead of waiting for a syllabus:
+            a live multiplayer code game, a deadlock simulator with zero threads, and a
+            counterfeit-medicine detector that runs on a phone camera. I like the part where
+            an idea goes from a whiteboard sketch to something a stranger can actually use.
+          </p>
+          <p>
+            When the summer ends, I'm happiest debugging Node services, poking at C++
+            concurrency, or reading papers about resource allocation.
+          </p>
+
+          <div class="chips">
+            <span class="chip">Full-stack</span>
+            <span class="chip">Machine learning</span>
+            <span class="chip">Systems</span>
+            <span class="chip">Data structures</span>
+          </div>
+        </div>
+
+        <aside class="card idea__side">
+          <h3>Blueprint</h3>
+          <dl class="facts">
+            <div><dt>Based in</dt><dd>Hyderabad, India</dd></div>
+            <div><dt>Studying</dt><dd>IIIT Manipur · 2023–2027</dd></div>
+            <div><dt>Focus</dt><dd>Web platforms, applied ML</dd></div>
+            <div><dt>Open to</dt><dd>Internships &amp; freelance</dd></div>
+          </dl>
+        </aside>
+      </div>
     </section>
 
-    <!-- ===== PROJECTS: duplicate or delete a card freely ===== -->
-    <section id="projects" class="section">
-      <h2>Projects</h2>
+    <!-- ============ INVENTIONS / PROJECTS ============ -->
+    <section class="section section--sky" id="inventions">
+      <div class="section__head">
+        <span class="badge badge--teal" aria-hidden="true"></span>
+        <h2>The -inator files</h2>
+      </div>
+      <p class="section__lede">
+        Every project of mine gets a proper name. Here are the three that made it out of
+        the backyard.
+      </p>
 
-      <div class="cards">
-        <article class="card">
-          <h3>Project One</h3>
-          <p>A short description of what it does and why it's interesting.</p>
-          <a href="#" class="card-link">View →</a>
+      <div class="inventions">
+        <article class="card invention">
+          <div class="invention__ribbon"><span>Invention 01</span></div>
+          <h3>The Bug-Finder-inator</h3>
+          <p class="invention__real">DebugMe · online bug-hunting game</p>
+          <ul class="ticks">
+            <li>Deployed a live game platform with <strong>50+ active users</strong> and JWT-based authentication.</li>
+            <li>Real-time <strong>Monaco editor</strong> in the browser, with automated test-case evaluation.</li>
+            <li>Integrated the <strong>Piston API</strong> across 5+ languages; built scoring, leaderboards and the full game loop.</li>
+            <li>Hosted on Render, handling real user traffic.</li>
+          </ul>
+          <div class="invention__links">
+            <a class="btn btn--sm btn--primary" href="https://debugme.onrender.com" target="_blank" rel="noopener">Play it</a>
+            <a class="btn btn--sm btn--ghost" href="https://github.com/Nitheesh-Purnanand/debugme" target="_blank" rel="noopener">Source</a>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Project Two</h3>
-          <p>Another project. Replace this text with something real when you have it.</p>
-          <a href="#" class="card-link">View →</a>
+        <article class="card invention">
+          <div class="invention__ribbon"><span>Invention 02</span></div>
+          <h3>The Deadlock-Unraveller-inator</h3>
+          <p class="invention__real">Distributed deadlock detection · C++20</p>
+          <ul class="ticks">
+            <li><strong>C++20 discrete-event simulation</strong> (SimCpp20 + coroutines): 5 processes contending for 3 resources, no real threads, fully deterministic.</li>
+            <li>Built a <strong>Resource Allocation Graph</strong>, derived the Wait-For Graph, and ran two-state DFS cycle detection to extract the exact cycle path.</li>
+            <li>Victim-selection recovery releases a process's resources to break each cycle.</li>
+            <li>Across a 100-unit run: <strong>125 requests, 6 deadlocks detected and recovered</strong>.</li>
+          </ul>
+          <div class="invention__links">
+            <a class="btn btn--sm btn--ghost" href="https://github.com/Nitheesh-Purnanand/distributed-deadlock-detection" target="_blank" rel="noopener">Source</a>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Project Three</h3>
-          <p>This site itself counts. It's version-controlled and deployed automatically.</p>
-          <a href="#" class="card-link">View →</a>
+        <article class="card invention">
+          <div class="invention__ribbon"><span>Invention 03</span></div>
+          <h3>The Counterfeit-Sniffer-inator</h3>
+          <p class="invention__real">Dual-stream medicine authentication · CV + ML</p>
+          <ul class="ticks">
+            <li>End-to-end vision pipeline that verifies medicine packaging from a <strong>standard smartphone camera</strong>.</li>
+            <li>Dual OCR architecture with EasyOCR print-quality metrics, fuzzy-matched against a <strong>256,000+ Indian medicines</strong> database.</li>
+            <li>Fused OCR metrics with 2,314-dimensional visual features (HOG, LBP, GLCM) into an <strong>XGBoost</strong> classifier.</li>
+            <li>Results: <strong>96.10% accuracy</strong>, 87.84% recall, +6.17 pp precision from OCR fusion.</li>
+          </ul>
+          <div class="invention__links">
+            <a class="btn btn--sm btn--ghost" href="https://github.com/Nitheesh-Purnanand/Counterfeit_med_detection.v4i.yolov8" target="_blank" rel="noopener">Source</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>The fastest way to reach me is email.</p>
-      <!-- Replace with your real address -->
-      <a class="email" href="mailto:hello@nitheesh920.qd.je">hello@nitheesh920.qd.je</a>
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="missions">
+      <div class="section__head">
+        <span class="badge badge--purple" aria-hidden="true"></span>
+        <h2>Field missions</h2>
+      </div>
+
+      <ol class="missions">
+        <li class="card mission">
+          <div class="mission__when">Apr 2026 – Jun 2026 · Remote</div>
+          <h3>Full Stack Developer Intern</h3>
+          <p class="mission__where">Vishvena Techno Solutions</p>
+          <ul class="ticks">
+            <li>Shipped <strong>Gullywood</strong>, a premium film-industry discovery platform connecting filmmakers and talent — casting calls, talent profiles and an indie streaming showcase — on Node.js, Express, MongoDB and React.</li>
+            <li>Built <strong>DreamTalk</strong>, a unified communications platform aggregating multiple messaging channels into one real-time team interface.</li>
+            <li>Owned both products end-to-end: UI design, REST API architecture, MongoDB schema design, integration and deployment.</li>
+          </ul>
+        </li>
+
+        <li class="card mission">
+          <div class="mission__when">Dec 2025 · Warangal, Telangana</div>
+          <h3>Research Intern</h3>
+          <p class="mission__where">National Institute of Technology, Warangal</p>
+          <ul class="ticks">
+            <li>Researched autonomic workload prediction and resource allocation for fog computing under Dr. Priyanka Chawla, Dept. of CSE.</li>
+            <li>Implemented <strong>LSTM and TCN</strong> models for CPU workload forecasting on the real-world Bitbrain dataset.</li>
+            <li>Designed a <strong>Q-learning adaptive allocation</strong> framework with TCN: higher resource utilisation with <strong>zero SLA violations</strong> versus the CSA baseline.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--sun" id="gadgets">
+      <div class="section__head">
+        <span class="badge badge--green" aria-hidden="true"></span>
+        <h2>Agent P's gadget belt</h2>
+      </div>
+      <p class="section__lede">Everything I reach for when the briefing arrives.</p>
+
+      <div class="gadgets">
+        <div class="card gadget">
+          <h3>Languages</h3>
+          <div class="chips">
+            <span class="chip">C</span><span class="chip">C++</span>
+            <span class="chip">Python</span><span class="chip">JavaScript</span>
+            <span class="chip">SQL</span>
+          </div>
+        </div>
+        <div class="card gadget">
+          <h3>Backend</h3>
+          <div class="chips">
+            <span class="chip">Node.js</span><span class="chip">Express.js</span>
+          </div>
+        </div>
+        <div class="card gadget">
+          <h3>Databases</h3>
+          <div class="chips">
+            <span class="chip">MySQL</span><span class="chip">MongoDB</span>
+          </div>
+        </div>
+        <div class="card gadget">
+          <h3>Libraries</h3>
+          <div class="chips">
+            <span class="chip">Pandas</span><span class="chip">NumPy</span>
+            <span class="chip">scikit-learn</span><span class="chip">Matplotlib</span>
+            <span class="chip">seaborn</span>
+          </div>
+        </div>
+        <div class="card gadget">
+          <h3>Systems &amp; concepts</h3>
+          <div class="chips">
+            <span class="chip">Data Structures &amp; Algorithms</span>
+            <span class="chip">OOP</span><span class="chip">OS</span>
+            <span class="chip">DBMS</span><span class="chip">Computer Networks</span>
+          </div>
+        </div>
+        <div class="card gadget">
+          <h3>Tools</h3>
+          <div class="chips">
+            <span class="chip">Git</span><span class="chip">GitHub</span>
+            <span class="chip">Docker</span><span class="chip">Postman</span>
+            <span class="chip">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION + CERTS ============ -->
+    <section class="section" id="school">
+      <div class="section__head">
+        <span class="badge badge--orange" aria-hidden="true"></span>
+        <h2>Summer school report card</h2>
+      </div>
+
+      <div class="school">
+        <article class="card school__card">
+          <p class="school__when">Aug 2023 – Jun 2027</p>
+          <h3>B.Tech, Computer Science &amp; Engineering</h3>
+          <p class="school__where">Indian Institute of Information Technology Manipur, Imphal</p>
+          <p class="school__note">Specialisation: AI &amp; Data Science · <strong>CPI 8.33</strong></p>
+        </article>
+
+        <article class="card school__card">
+          <p class="school__when">Certifications</p>
+          <h3>Extra credit</h3>
+          <ul class="certs">
+            <li>
+              <a href="https://drive.google.com/file/d/1xqsH_Zbm7nR7YcVqhUXi4CXRy5Cevp9d/view" target="_blank" rel="noopener">Data Analysis with Python</a>
+              <span>IBM</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1q2rH8pMLAAm78kivdZVoZx6yJPoKu-9N/view" target="_blank" rel="noopener">What is Data Science</a>
+              <span>IBM</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1_l5sea1sDXyYj5KdjstTU1iuIO8iWmZ3/view" target="_blank" rel="noopener">C++ Training</a>
+              <span>Spoken Tutorial, IIT Bombay</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--contact" id="contact">
+      <div class="card contact">
+        <div class="contact__copy">
+          <div class="section__head">
+            <span class="badge badge--teal" aria-hidden="true"></span>
+            <h2>Call the agency</h2>
+          </div>
+          <p>
+            Looking for an intern, a collaborator, or someone to build the thing you sketched
+            on a napkin? My inbox is not a secret lair.
+          </p>
+          <p class="contact__note">
+            Pick a channel — dooby dooby doo bah optional.
+          </p>
+        </div>
+
+        <div class="contact__links">
+          <a class="linkbtn linkbtn--mail" href="mailto:chalumuri.nitheesh@gmail.com">
+            <span class="linkbtn__label">Email</span>
+            <span class="linkbtn__value">chalumuri.nitheesh@gmail.com</span>
+          </a>
+          <a class="linkbtn" href="https://github.com/Nitheesh-Purnanand" target="_blank" rel="noopener">
+            <span class="linkbtn__label">GitHub</span>
+            <span class="linkbtn__value">/Nitheesh-Purnanand</span>
+          </a>
+          <a class="linkbtn" href="https://linkedin.com/in/nitheesh-purnanand-chalumuri/" target="_blank" rel="noopener">
+            <span class="linkbtn__label">LinkedIn</span>
+            <span class="linkbtn__value">/in/nitheesh-purnanand-chalumuri</span>
+          </a>
+          <a class="linkbtn" href="https://leetcode.com/u/nitheesh920/" target="_blank" rel="noopener">
+            <span class="linkbtn__label">LeetCode</span>
+            <span class="linkbtn__value">/u/nitheesh920</span>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© <span id="year">2026</span> Nitheesh. Built by hand, hosted on GitHub Pages.</p>
+  <footer class="footer">
+    <svg class="doof" viewBox="0 0 140 190" aria-hidden="true">
+      <rect x="34" y="46" width="72" height="140" fill="#B9B3C7" stroke="#221A33" stroke-width="4" />
+      <path d="M30 46 L70 8 L110 46 Z" fill="#8B6BD1" stroke="#221A33" stroke-width="4" stroke-linejoin="round" />
+      <rect x="46" y="66" width="48" height="30" rx="4" fill="#221A33" />
+      <text x="70" y="88" text-anchor="middle" font-family="Luckiest Guy, Trebuchet MS" font-size="18" fill="#FFC93C">EVIL</text>
+      <g fill="#FFC93C" stroke="#221A33" stroke-width="3">
+        <rect x="46" y="112" width="18" height="18" />
+        <rect x="76" y="112" width="18" height="18" />
+        <rect x="46" y="146" width="18" height="18" />
+        <rect x="76" y="146" width="18" height="18" />
+      </g>
+    </svg>
+
+    <div class="footer__copy">
+      <p class="footer__line">"Curse you, Perry the Platypus!"</p>
+      <p class="footer__small">
+        © <span id="year">2026</span> Chalumuri Nitheesh Purnanand · built by hand, no
+        build step, hosted on GitHub Pages.
+      </p>
+    </div>
+
+    <button class="perry-btn" id="perryBtn" aria-label="Poke Perry">Poke Perry</button>
   </footer>
 
   <script src="script.js"></script>

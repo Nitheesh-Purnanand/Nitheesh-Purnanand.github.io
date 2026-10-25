@@ -1,37 +1,27 @@
 # nitheesh920.qd.je
 
-Personal site, hosted free on **GitHub Pages** and served on the custom domain
-**nitheesh920.qd.je**.
+Personal portfolio for **Chalumuri Nitheesh Purnanand**, built as a **Phineas and Ferb**
+themed page: triangle-headed kids, a rollercoaster, "-inator" project names, and an
+Agent P night mode.
 
-No build step, no framework, no `npm install`. It is three files:
+Live on **GitHub Pages** at <http://nitheesh920.qd.je> (custom domain), with the repo at
+<https://github.com/Nitheesh-Purnanand/Nitheesh-Purnanand.github.io>.
+
+No framework, no build step, no `npm install`. Four files:
 
 | File | What it is |
 | --- | --- |
-| `index.html` | All the text and structure. Start here. |
-| `styles.css` | Colours, fonts, spacing. The `:root` block at the top is your palette. |
-| `script.js` | Dark-mode toggle and the auto-updating copyright year. |
+| `index.html` | All the content: hero, projects, experience, skills, education, contact. |
+| `styles.css` | The whole look. Palette lives in the `:root` block at the top. |
+| `script.js` | Agent P mode, scroll reveals, the Perry button, copyright year. |
+| `CNAME` | Tells GitHub Pages which domain to answer on. Do not delete it. |
 
-`CNAME` tells GitHub Pages which domain to answer on. Do not delete it.
-
-> **Status:** the site is deployed and GitHub is already answering on
-> `nitheesh920.qd.je` (verified by sending a request to GitHub's page servers with that
-> hostname). The only thing missing is the DNS records at DigitalPlat — see
-> [DNS records](#dns-records-that-must-exist-at-digitalplat) below.
+Drawing is done with inline SVG (Phineas, Ferb, Perry, the rollercoaster, the
+Doofenshmirtz tower), so there are no image files to manage.
 
 ---
 
-## 0. Check whether go-live is done
-
-```powershell
-cd C:\Users\HP\Downloads\nitheesh920-site
-powershell -ExecutionPolicy Bypass -File .\check-dns.ps1
-```
-
-It reports A records, the `www` CNAME, and whether HTTPS is answering yet.
-
----
-
-## 1. Edit it in VS Code
+## Editing the content
 
 Open the folder:
 
@@ -40,92 +30,95 @@ cd C:\Users\HP\Downloads\nitheesh920-site
 code .
 ```
 
-Then just edit `index.html`. Text lives between tags:
+Then edit `index.html`. The sections are commented:
 
-```html
-<h1>Hi, I'm Nitheesh.</h1>
+| Section | Anchor | Theme name |
+| --- | --- | --- |
+| Intro / hero | `#top` | "Hey, Ferb, I know what we're gonna build today!" |
+| About | `#idea` | Today's big idea |
+| Projects | `#inventions` | The -inator files |
+| Experience | `#missions` | Field missions |
+| Skills | `#gadgets` | Agent P's gadget belt |
+| Education | `#school` | Summer school report card |
+| Contact | `#contact` | Call the agency |
+
+Changing a colour is a one-line edit: the palette at the top of `styles.css`.
+
+```css
+--sun:    #FFC93C;   /* ribbon, badges, highlights */
+--orange: #F4732A;   /* Phineas' hair, primary buttons */
+--teal:   #00A6A6;   /* Perry, section accents */
+--grass:  #66C46B;   /* the hills under the hero */
 ```
 
-Change the words between `>` and `<`, save with `Ctrl+S`, and you are done.
+Two things are deliberately left out of the HTML: your **phone number** (public pages
+collect spam) and any address detail beyond the city. If you want the number on the page,
+add it inside the `.contact__links` block in `index.html`.
 
-## 2. Preview locally before publishing
-
-**Option A — VS Code Live Server (recommended)**
-
-1. Extensions panel (`Ctrl+Shift+X`) → install **Live Server** by Ritwick Dey.
-2. Right-click `index.html` → **Open with Live Server**.
-3. It opens `http://127.0.0.1:5500` and reloads on every save.
-
-**Option B — no extension**
+## Preview locally
 
 ```powershell
-cd C:\Users\HP\Downloads\nitheesh920-site
 python -m http.server 8000
 ```
 
-Then open <http://localhost:8000>.
+Then open <http://localhost:8000>. Or install the **Live Server** VS Code extension and
+right-click `index.html` → *Open with Live Server*.
 
-> Don't judge the site by double-clicking `index.html`. Opening via `file://` breaks some
-> things; use one of the two options above.
+Do not judge the page by double-clicking `index.html`; the `file://` protocol breaks some
+browser behaviour.
 
-## 3. Publish a change
-
-Every push to `main` redeploys the site. Takes about 30 to 60 seconds.
+## Publish a change
 
 ```powershell
-cd C:\Users\HP\Downloads\nitheesh920-site
 git add -A
-git commit -m "update homepage text"
+git commit -m "update projects"
 git push
 ```
 
-Watch the deploy at <https://github.com/Nitheesh-Purnanand/Nitheesh-Purnanand.github.io/actions>.
+GitHub rebuilds in about a minute. Hard refresh (`Ctrl+Shift+R`) if the old page sticks.
 
 ---
 
-## How the hosting actually works
+## How the hosting works
 
 ```
-Your browser
-    │  asks DNS: where is nitheesh920.qd.je?
-    ▼
-DigitalPlat DNS  ──A records──►  185.199.108-111.153   (GitHub's page servers)
-    │
-    ▼
-GitHub Pages reads the CNAME file, serves index.html over HTTPS
+Browser  →  DNS: where is nitheesh920.qd.je?
+             ↓
+        DigitalPlat DNS  ──A records──►  185.199.108–111.153  (GitHub Pages servers)
+             ↓
+        GitHub Pages serves index.html from the CNAME in this repo, over HTTPS
 ```
 
-Two accounts involved:
+* **DigitalPlat** (where the domain is registered) only holds DNS records. It does not
+  store the website.
+* **GitHub** stores the files and serves them.
 
-1. **DigitalPlat** (where you bought the domain) only answers "which server is this
-   domain?" via DNS records. It does not store your website.
-2. **GitHub** stores the files and serves them.
+### DNS records at DigitalPlat
 
-### DNS records that must exist at DigitalPlat
+| Type | Name | Value |
+| --- | --- | --- |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `nitheesh-purnanand.github.io.` |
 
-| Type | Name | Value | TTL |
-| --- | --- | --- | --- |
-| A | `@` | `185.199.108.153` | 3600 |
-| A | `@` | `185.199.109.153` | 3600 |
-| A | `@` | `185.199.110.153` | 3600 |
-| A | `@` | `185.199.111.153` | 3600 |
-| CNAME | `www` | `nitheesh-purnanand.github.io` | 3600 |
+The trailing dot on the CNAME matters: without it the panel appends the zone and you end
+up with `nitheesh-purnanand.github.io.nitheesh920.qd.je`, which resolves to nothing.
 
-Leave the two existing `NS` records alone.
+Leave the two `NS` records alone.
 
-Verify from a terminal:
+Check it with:
 
 ```powershell
-nslookup nitheesh920.qd.je 8.8.8.8
+powershell -ExecutionPolicy Bypass -File .\check-dns.ps1
 ```
-
-You want four GitHub IPs back, not "non-existent domain".
 
 ### HTTPS
 
-GitHub issues a free Let's Encrypt certificate once DNS resolves. In
-**Settings → Pages**, wait for the certificate to appear, then tick **Enforce HTTPS**.
-This can take anywhere from 5 minutes to a few hours after DNS is correct.
+GitHub issues a free Let's Encrypt certificate after DNS resolves, then you can tick
+**Enforce HTTPS** in the repo's *Settings → Pages*. That can take from a few minutes to a
+few hours to settle.
 
 ---
 
@@ -133,16 +126,8 @@ This can take anywhere from 5 minutes to a few hours after DNS is correct.
 
 | Symptom | Fix |
 | --- | --- |
-| "Domain does not resolve" | A records missing or still propagating. Check with the `nslookup` above. |
-| 404 at the domain | CNAME file missing from the repo, or Pages source set to the wrong branch. |
-| Works without `www`, fails with it | Missing `www` CNAME record. |
-| Changes not showing | Hard refresh (`Ctrl+Shift+R`), or check the Actions tab for a failed run. |
-| "Not secure" warning | Certificate not issued yet. DNS first, then wait. |
-
----
-
-## Replacing this with a framework later
-
-You do not need to. But if you ever want React, Vite, Astro, etc., the deploy becomes
-"build the site, publish the `dist/` folder". GitHub Pages supports that through a
-GitHub Actions workflow, and the domain setup above stays exactly the same.
+| "Domain does not resolve" | A records missing or propagating. Run the check script. |
+| 404 at the domain | `CNAME` file deleted from the repo, or Pages source set to another branch. |
+| Changes not showing | Hard refresh, or check the Actions tab for a failed Pages build. |
+| "Not secure" warning | Certificate not issued yet. Fix DNS first, then wait. |
+| Fonts look like Times New Roman | Google Fonts blocked offline; the site still works with fallback fonts. |
