@@ -13,6 +13,22 @@ No build step, no framework, no `npm install`. It is three files:
 
 `CNAME` tells GitHub Pages which domain to answer on. Do not delete it.
 
+> **Status:** the site is deployed and GitHub is already answering on
+> `nitheesh920.qd.je` (verified by sending a request to GitHub's page servers with that
+> hostname). The only thing missing is the DNS records at DigitalPlat — see
+> [DNS records](#dns-records-that-must-exist-at-digitalplat) below.
+
+---
+
+## 0. Check whether go-live is done
+
+```powershell
+cd C:\Users\HP\Downloads\nitheesh920-site
+powershell -ExecutionPolicy Bypass -File .\check-dns.ps1
+```
+
+It reports A records, the `www` CNAME, and whether HTTPS is answering yet.
+
 ---
 
 ## 1. Edit it in VS Code
