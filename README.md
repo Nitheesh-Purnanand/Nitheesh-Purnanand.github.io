@@ -51,9 +51,26 @@ Changing a colour is a one-line edit: the palette at the top of `styles.css`.
 --grass:  #66C46B;   /* the hills under the hero */
 ```
 
-Two things are deliberately left out of the HTML: your **phone number** (public pages
-collect spam) and any address detail beyond the city. If you want the number on the page,
-add it inside the `.contact__links` block in `index.html`.
+Draw a colour from the palette at the top of `styles.css`. Two things are deliberately left
+out of the HTML: your **phone number** (public pages collect spam) and any address detail
+beyond the city. If you want the number on the page, add it inside the `.contact__links`
+block in `index.html`.
+
+### The link preview image
+
+`og-image.png` is the 1200×630 card that shows up when the link is shared on Discord,
+Slack, WhatsApp or LinkedIn. It is a screenshot of this page's hero, so it drifts out of
+date if you change the headline. To regenerate it after edits, open the page in a browser
+at 1600×840 with the zoom set so the output is 1200×630, or re-render headlessly:
+
+```powershell
+# hide the sections below the hero first, then screenshot
+& "C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new --disable-gpu `
+  --hide-scrollbars --force-device-scale-factor=0.75 --window-size=1600,840 `
+  --virtual-time-budget=6000 --screenshot="og-image.png" "file:///$PWD/_card.html"
+```
+
+Where `_card.html` is a copy of `index.html` with `.gag, main > .section, .footer` hidden.
 
 ## Preview locally
 
