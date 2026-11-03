@@ -600,7 +600,7 @@ a { color: inherit; }
 /* ---------- inventions ---------- */
 .inventions {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
   gap: 30px 24px;
   padding-top: 14px;
 }
@@ -614,6 +614,7 @@ a { color: inherit; }
 
 .invention:nth-child(2) { transform: rotate(1.2deg); }
 .invention:nth-child(3) { transform: rotate(-.5deg); }
+.invention:nth-child(4) { transform: rotate(.8deg); }
 
 .invention:hover {
   transform: rotate(0deg) translateY(-5px);
@@ -646,6 +647,7 @@ a { color: inherit; }
 
 .invention:nth-child(2) .invention__ribbon { background: var(--purple); color: #1B1030; }
 .invention:nth-child(3) .invention__ribbon { background: var(--pink); color: #3A0A18; }
+.invention:nth-child(4) .invention__ribbon { background: var(--orange); color: #2A1200; }
 
 .invention__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 
